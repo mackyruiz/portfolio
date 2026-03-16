@@ -149,13 +149,15 @@ Network Operations & Security
     projects: {
       type: "dir",
       children: {
-        "opensuse-setup.txt": {
+        "homelab.txt": {
           type: "file",
-          content: `openSUSE Tumbleweed bootstrap project
+          content: `Homelab on a budget
+What if I told you this 10-year-old laptop can run a full IT lab—web servers, VMs, a VPN, and even a Git server.
 
-- Automated workstation and VM setup with Ansible
-- Includes dev tooling, containers, virtualization, and CTF packages
-- Designed for repeatable personal lab provisioning`
+I’m creating a series where its focused on building practical, budget-friendly home labs by using old laptops. We’ll install Linux and KVM on Linux. No expensive enterprise servers and a great WAF, or Wife Acceptance Factor.
+
+read more here: https://www.supermaru.com/2025/08/homelab-on-a-budget/
+`
         },
         "security-lab.txt": {
           type: "file",
