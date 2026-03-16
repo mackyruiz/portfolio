@@ -174,9 +174,9 @@ Network Operations & Security
           type: "file",
           content: `Contact
 
-Email: your-email@example.com
-GitHub: github.com/your-handle
-LinkedIn: linkedin.com/in/your-profile`
+Email: ruiz.mackyjo@gmail.com
+GitHub: github.com/mackyruiz
+LinkedIn: linkedin.com/in/mackyruiz`
         }
       }
     }
