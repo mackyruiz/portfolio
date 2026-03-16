@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macky's Terminal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="terminal" aria-label="Interactive terminal">
+      <div id="output" class="terminal__output" aria-live="polite">
+        <form id="terminal-form" class="prompt-row" autocomplete="off">
+          <label class="prompt" for="terminal-input">guest@mackyruiz</label>
+          <span class="prompt-separator">:</span>
+          <span id="cwd" class="cwd">~</span>
+          <span class="prompt-symbol">$</span>
+          <input
+            id="terminal-input"
+            class="terminal-input"
+            name="command"
+            type="text"
+            spellcheck="false"
+            autofocus
+            aria-label="Terminal command input"
+          >
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
