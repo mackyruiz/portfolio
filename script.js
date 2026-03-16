@@ -195,7 +195,8 @@ let draftInput = "";
 let pagerState = null;
 let bootInProgress = true;
 
-const commands = ["ls", "cd", "cat", "more", "less", "pwd", "whoami", "uname", "uptime", "help", "history","clear", "nano", "emacs", "vim"];
+const commands = ["ls", "cd", "cat", "more", "less", "pwd", "whoami", "uname", "uptime", "resume", "help", "history","clear", "nano", "emacs", "vim"];
+const resumeDownloadPath = "./Macky%20Ruiz%20Resume.pdf";
 
 const bootBanner = [
   "                  _                   _                           ",
@@ -207,7 +208,7 @@ const bootBanner = [
 
 const bootMessages = [
   "Hey there! Welcome to my site! Type 'help' to see available commands.",
-  "Try 'whoami', 'ls', or 'less resume.txt'.",
+  "Try 'whoami', 'ls', or 'less resume.txt' or 'resume -d' to download my resume.",
 ];
 
 const helpText = `Available commands:
@@ -229,6 +230,8 @@ uname
  - this shows the system information for this terminal environment.
 uptime
  - how long I've been building things in IT
+resume -d
+ - downloads my PDF resume.
 history
  - my career history
 help
@@ -499,6 +502,15 @@ function formatLs(node) {
 
 function printHelp() {
   appendEntry(helpText);
+}
+
+function downloadResume() {
+  const link = document.createElement("a");
+  link.href = resumeDownloadPath;
+  link.download = "Macky-Ruiz-Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 }
 
 function renderFile(content) {
@@ -773,6 +785,14 @@ Type "help" to explore the rest of the terminal.`);
       break;
     case "uptime":
       appendEntry("up 15 years, 5 companies, 1000s of servers managed, load average: coffee, curiosity, automation");
+      break;
+    case "resume":
+      if (target === "-d") {
+        downloadResume();
+        appendEntry("Downloading resume: 'Macky Ruiz Resume.pdf'");
+      } else {
+        appendEntry("Usage: resume -d");
+      }
       break;
     case "nano":
       appendEntry("c'mon, just use vim already.");
