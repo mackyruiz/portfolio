@@ -1,6 +1,6 @@
 # Portfolio
 
-Interactive terminal-style portfolio site built as a static GitHub Pages project.
+100% vibe coded interactive terminal-style portfolio site built as a static GitHub Pages project.
 
 The site presents portfolio content through a browser-based terminal interface with a fake filesystem, command history, tab completion, a typed boot sequence, and pager-style file viewing.
 
