@@ -159,14 +159,6 @@ I’m creating a series where its focused on building practical, budget-friendly
 read more here: https://www.supermaru.com/2025/08/homelab-on-a-budget/
 `
         },
-        "security-lab.txt": {
-          type: "file",
-          content: `Security lab notes
-
-- VM-based testing environment
-- Packet capture and traffic inspection workflow
-- Focus on safe experimentation, service analysis, and reproducible configs`
-        }
       }
     },
     contact: {
